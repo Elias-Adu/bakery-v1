@@ -1,0 +1,122 @@
+:root {
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-yellow-primary: #ffc500;
+  --clr-yellow-light-1: hsl(56, 86%, 81%);
+  /*versatile styles*/
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+/*
+==========
+Navbar
+==========
+*/
+nav {
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-yellow-primary);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: #222;
+  transform: rotate(90deg);
+}
+.logo {
+  height: 40px;
+}
+.logo:hover {
+  cursor: pointer;
+}
+
+.links a {
+  color: #222;
+  font-size: 1.2rem;
+  font-family: kanit, poppins, Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.links a:hover {
+  background: var(--clr-yellow-light-1);
+  color: var(--clr-yellow-primary);
+  padding-left: 1.5rem;
+}
+.social-icons {
+  display: none;
+}
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  /* to make dropdown-menu slide over hero content and not push it down  */
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+}
+.show-container {
+  height: 10rem;
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+    width: auto;
+    position: static;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .social-icons {
+    display: flex;
+  }
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: #222;
+    transition: var(--transition);
+  }
+  .social-icons a:hover {
+    color: #ffc500;
+  }
+}

@@ -1,0 +1,124 @@
+.about-container {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  justify-content: space-evenly;
+  background-color: #ffc500;
+}
+.about-info {
+  max-width: 100%;
+  align-self: center;
+  text-align: center;
+  margin: 30px 10px;
+  padding: 10px 10px;
+}
+.about-info h2 {
+  font-size: 25px;
+  text-transform: capitalize;
+}
+/* .underline {
+  border-bottom: 5px solid #000;
+  height: 500px;
+} */
+.about-text {
+  font-size: 15px;
+  line-height: 25px;
+}
+.about-image-center {
+  order: -1;
+  width: 90%;
+  place-self: center;
+}
+.about-image {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 10px;
+}
+.about-btn {
+  font-size: 1rem;
+  font-family: kanit, poppins, Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border-color: transparent;
+  background: #000;
+  color: #fdfcfa;
+  transition: 0.2s ease-out;
+  display: inline;
+}
+.about-btn:hover {
+  background: #fdfcfa;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  color: #ffc500;
+}
+/* for Medium devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+  .about-container {
+    grid-template-columns: repeat(2, 1fr);
+    height: 80vh;
+    place-content: center;
+  }
+  .about-info {
+    width: 50vw;
+    height: 50vh;
+    padding: 10px 20px;
+    place-self: center;
+    align-items: center;
+  }
+  .about-text {
+    text-align: left;
+    align-self: center;
+    margin-bottom: 10px;
+  }
+  .about-image-center {
+    max-height: 50%;
+    align-self: center;
+  }
+  .about-image {
+    align-self: center;
+  }
+  .about-info h2 {
+    text-align: left;
+  }
+}
+/* for Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .about-container {
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+    place-content: center;
+  }
+  .about-image-center {
+    max-height: 50%;
+    align-self: center;
+  }
+  .about-image {
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 100%;
+  }
+  .about-info {
+    display: grid;
+    align-content: center;
+    /* border: 3px solid black; */
+    width: 50vw;
+    height: 70%;
+    margin: 200px 50px;
+    padding: 10px 20px;
+  }
+  .about-info h2 {
+    padding-bottom: 20px;
+    font-size: 35px;
+    text-align: left;
+  }
+  .about-btn {
+    width: 30%;
+  }
+  .about-text {
+    align-self: center;
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
